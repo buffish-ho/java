@@ -1,2 +1,2 @@
 # java
-including java knowledge tutorial, data structure, design patterns &amp; principles.
+主要包含：Java基础学习，数据结构，设计模式，设计原则。
