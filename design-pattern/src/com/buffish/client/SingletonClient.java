@@ -1,6 +1,6 @@
-package com.miracle.client;
+package com.buffish.client;
 
-import com.miracle.pattern.singleton.*;
+import com.buffish.pattern.singleton.*;
 
 public class SingletonClient {
     public static void run() {

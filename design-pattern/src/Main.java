@@ -1,4 +1,4 @@
-import com.miracle.client.SingletonClient;
+import com.buffish.client.SingletonClient;
 
 public class Main {
     public static void main(String[] args) {
