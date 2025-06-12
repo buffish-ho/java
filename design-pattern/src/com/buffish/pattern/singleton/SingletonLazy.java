@@ -45,18 +45,28 @@ public class SingletonLazy {
 //    }
 
     // 第四种方式：使用 volatile 避免指令重排，同时保证在多线程条件下保持高性能
-    private static volatile SingletonLazy instance;
+//    private static volatile SingletonLazy instance;
+//    public static SingletonLazy getInstance() {
+//        // 第一重检查
+//        if (instance == null) {
+//            // 线程安全
+//            synchronized (SingletonLazy.class) {
+//                // 第二重检查
+//                if (instance == null) {
+//                    instance = new SingletonLazy();
+//                }
+//            }
+//        }
+//        return instance;
+//    }
+
+    // 第五种方式: 使用静态内部类实现，保证静态内部类加载时只有一个线程（线程安全）
+    // 默认外部类(单例类)初次加载时，静态内部类还不会立即加载，只有当调用getInstance方法时，才会加载静态内部类
+    // 而静态内部类的的静态属性只会在类首次加载加载时完成初始化，因此既保证线程安全，同时也做到延迟加载
+    private static class SingletonLazyInner {
+        private static final SingletonLazy instance = new SingletonLazy();
+    }
     public static SingletonLazy getInstance() {
-        // 第一重检查
-        if (instance == null) {
-            // 线程安全
-            synchronized (SingletonLazy.class) {
-                // 第二重检查
-                if (instance == null) {
-                    instance = new SingletonLazy();
-                }
-            }
-        }
-        return instance;
+        return SingletonLazyInner.instance;
     }
 }
