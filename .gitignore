@@ -23,7 +23,7 @@ bin/
 /.nb-gradle/
 
 ### Code Editor ###
-../.idea/
+.idea/
 .vscode/
 .iml
 
