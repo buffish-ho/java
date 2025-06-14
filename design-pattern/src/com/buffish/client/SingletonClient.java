@@ -3,6 +3,7 @@ package com.buffish.client;
 import com.buffish.pattern.singleton.*;
 
 public class SingletonClient {
+    static { PatternClient.ready("单例模式"); }
     public static void run() {
         // 懒汉实现
         SingletonLazy l1 = SingletonLazy.getInstance();
