@@ -1,4 +1,4 @@
-package com.miracle.data.array;
+package com.buffish.data.array;
 
 public class DynamicArray {
     private int size = 0; // 数组大小
