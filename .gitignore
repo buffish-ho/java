@@ -21,12 +21,11 @@ bin/
 /dist/
 /nbdist/
 /.nb-gradle/
-/.iml/
 
 ### VS Code ###
 .vscode/
 .idea/
-**.*.iml
+**/*.iml
 
 ### Mac OS ###
 .DS_Store
