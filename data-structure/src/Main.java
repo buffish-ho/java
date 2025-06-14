@@ -2,7 +2,7 @@ import com.buffish.client.*;
 
 public class Main {
     public static void main(String[] args) {
-        // 数组
-        ArrayClient.run();
+        // 动态数组
+        DynamicArrayClient.run();
     }
 }
